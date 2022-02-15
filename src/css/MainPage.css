@@ -1,0 +1,61 @@
+.MainPage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-image {
+  align-items: center;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.ash {
+  width: 15%;
+}
+
+.girl {
+  width: 20%;
+}
+
+.main-image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.main-button-container button {
+  border: none;
+  border-radius: 30em;
+  box-shadow: 6px 6px 12px #c5c5c5 , -6px -6px 12px white;
+  font-family: inherit;
+  font-size: 15px;
+  height: 3em;
+  overflow: hidden;
+  position: relative;
+  width: 9em;
+  z-index: 1;
+}
+
+.main-button-container button:before {
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  border-radius: 30em;
+  content: '';
+  display: block;
+  height: 3em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s ease;
+  width: 0;
+  z-index: -1;
+}
+
+.main-button-container button:hover:before {
+  width: 9em;
+}
