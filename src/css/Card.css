@@ -44,6 +44,7 @@
 
 .Card article {
   display: flex;
+  margin-top: 10px;
 }
 
 .Card article p {
