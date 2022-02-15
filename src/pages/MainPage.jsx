@@ -7,7 +7,6 @@ import title from '../images/title.png';
 
 export default function MainPage() {
   const history = useHistory();
-  console.log('oi');
 
   return (
     <div className="MainPage">

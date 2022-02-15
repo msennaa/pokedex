@@ -1,0 +1,61 @@
+.Favorite {
+  display: flex;
+  flex-direction: column;
+}
+
+.Favorite h1 {
+  text-align: center;
+}
+
+.favorite-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.favorite-card img {
+  width: 200px;
+}
+
+.remove-button {
+  font-weight: bold;
+  margin-top: 10px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.remove-button img {
+  width: 30px;
+}
+
+.favorite-image-container {
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  justify-content: space-between;
+}
+
+.pikachu {
+  width: 10%;
+  height: 15%;
+  align-self: flex-end;
+}
+
+.rocket {
+  width: 15%;
+  bottom: 0;
+}
+
+.trio {
+  width: 20%;
+}

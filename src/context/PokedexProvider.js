@@ -15,6 +15,8 @@ export default function PokedexProvider({ children }) {
   const [thirdGeneration, setThirdGeneration] = useState([]);
   const [fourthGeneration, setFourthGeneration] = useState([]);
   const [fifthGeneration, setFifthGeneration] = useState([]);
+  const [pokemon, setPokemon] = useState({});
+  const [favorite, setFavorite] = useState([]);
 
   const firstRender = async () => {
     setFirstGeneration(await fetchFirstGenerationPokemons());
@@ -24,11 +26,13 @@ export default function PokedexProvider({ children }) {
     setFifthGeneration(await fetchFifthGenerationPokemons());
   };
 
+  const createTeam = (newPoke) => {
+    setFavorite([...favorite, newPoke]);
+  };
+
   useEffect(() => {
     firstRender();
   }, []);
-
-  console.log(fifthGeneration);
 
   const store = {
     firstGeneration,
@@ -36,7 +40,14 @@ export default function PokedexProvider({ children }) {
     thirdGeneration,
     fourthGeneration,
     fifthGeneration,
+    pokemon,
+    setPokemon,
+    createTeam,
+    setFavorite,
+    favorite,
   };
+
+  console.log(favorite);
 
   return (
     <PokedexContext.Provider value={ store }>

@@ -7,6 +7,8 @@ import Hoenn from './pages/Hoenn';
 import Sinnoh from './pages/Sinnoh';
 import Unova from './pages/Unova';
 import MainPage from './pages/MainPage';
+import Details from './pages/Details';
+import Favorites from './pages/Favorites';
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/hoenn" exact component={ Hoenn } />
           <Route path="/sinnoh" exact component={ Sinnoh } />
           <Route path="/unova" exact component={ Unova } />
+          <Route path="/pokemon/:name" exact component={ Details } />
+          <Route path="/favorites" exact component={ Favorites } />
         </Switch>
       </BrowserRouter>
     </PokedexProvider>

@@ -6,7 +6,7 @@ import '../css/RegionPage.css';
 import '../css/Card.css';
 
 export default function Kanto() {
-  const { firstGeneration } = useContext(PokedexContext);
+  const { firstGeneration, setPokemon } = useContext(PokedexContext);
   const [input, setInput] = useState('');
   const history = useHistory();
 
@@ -16,7 +16,21 @@ export default function Kanto() {
   };
 
   const result = handleChange();
-  console.log(result);
+
+  const handleClick = (pokemon) => {
+    const newObj = {
+      name: pokemon.name,
+      image: pokemon.sprites.other.dream_world.front_default,
+      id: pokemon.id,
+      types: pokemon.types,
+      stats: pokemon.stats,
+      pokemon: pokemon.weight,
+      experience: pokemon.base_experience,
+      shiny: pokemon.sprites.front_shiny,
+    };
+    setPokemon(newObj);
+    history.push(`pokemon/${pokemon.name}`);
+  };
 
   return (
     <div className="region-page">
@@ -51,7 +65,12 @@ export default function Kanto() {
             <h4>Pokemon não encontrado</h4>
           ) : (
             result.map((poke) => (
-              <button type="button" className="Card" key={ poke.id }>
+              <button
+                type="button"
+                className="Card"
+                key={ poke.id }
+                onClick={ () => handleClick(poke) }
+              >
                 <Cell
                   id={ poke.id }
                   name={ poke.name }

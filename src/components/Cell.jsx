@@ -4,7 +4,7 @@ import PropTypes, { string } from 'prop-types';
 export default function Cell(props) {
   const { name, image, type } = props;
   return (
-    <div to={ `/pokemon/${name}` } className="teste">
+    <div className="teste">
       <h3>{name}</h3>
       <img src={ image } alt={ name } />
       <article>
@@ -23,10 +23,3 @@ Cell.propTypes = {
   image: PropTypes.string.isRequired,
   type: PropTypes.arrayOf(string).isRequired,
 };
-
-// PokedexProvider.propTypes = {
-//   children: PropTypes.oneOfType([
-//     PropTypes.arrayOf(PropTypes.node),
-//     PropTypes.node,
-//   ]).isRequired,
-// };

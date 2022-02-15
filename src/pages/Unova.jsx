@@ -6,11 +6,26 @@ import PokedexContext from '../context/PokedexContext';
 export default function Unova() {
   const history = useHistory();
   const [input, setInput] = useState('');
-  const { fifthGeneration } = useContext(PokedexContext);
+  const { fifthGeneration, setPokemon } = useContext(PokedexContext);
 
   const handleChange = () => {
     const result = fifthGeneration.filter((poke) => poke.name.includes(input));
     return result;
+  };
+
+  const handleClick = (pokemon) => {
+    const newObj = {
+      name: pokemon.name,
+      image: pokemon.sprites.other.dream_world.front_default,
+      id: pokemon.id,
+      types: pokemon.types,
+      stats: pokemon.stats,
+      pokemon: pokemon.weight,
+      experience: pokemon.base_experience,
+      shiny: pokemon.sprites.front_shiny,
+    };
+    setPokemon(newObj);
+    history.push(`pokemon/${pokemon.name}`);
   };
 
   const result = handleChange();
@@ -24,14 +39,14 @@ export default function Unova() {
         <button type="button" onClick={ () => history.push('/kanto') }>
           Kanto
         </button>
+        <button type="button" onClick={ () => history.push('/johto') }>
+          Johto
+        </button>
         <button type="button" onClick={ () => history.push('/hoenn') }>
           Hoenn
         </button>
         <button type="button" onClick={ () => history.push('/sinnoh') }>
           Sinnoh
-        </button>
-        <button type="button" onClick={ () => history.push('/unova') }>
-          Unova
         </button>
       </nav>
       <input
@@ -47,7 +62,12 @@ export default function Unova() {
             <h4>Pokemon não encontrado</h4>
           ) : (
             result.map((poke, id) => (
-              <button type="button" className="Card" key={ id }>
+              <button
+                type="button"
+                className="Card"
+                key={ id }
+                onClick={ () => handleClick(poke) }
+              >
                 <Cell
                   name={ poke.name }
                   image={ poke.sprites.other.dream_world.front_default }

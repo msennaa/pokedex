@@ -4,9 +4,9 @@ import Cell from '../components/Cell';
 import PokedexContext from '../context/PokedexContext';
 
 export default function Johto() {
+  const { secondGeneration, setPokemon } = useContext(PokedexContext);
   const history = useHistory();
   const [input, setInput] = useState('');
-  const { secondGeneration } = useContext(PokedexContext);
 
   const handleChange = () => {
     const result = secondGeneration.filter((poke) => poke.name.includes(input));
@@ -14,6 +14,22 @@ export default function Johto() {
   };
 
   const result = handleChange();
+
+  const handleClick = (pokemon) => {
+    const newObj = {
+      name: pokemon.name,
+      image: pokemon.sprites.other.dream_world.front_default,
+      id: pokemon.id,
+      types: pokemon.types,
+      stats: pokemon.stats,
+      pokemon: pokemon.weight,
+      experience: pokemon.base_experience,
+      shiny: pokemon.sprites.front_shiny,
+    };
+    setPokemon(newObj);
+    history.push(`pokemon/${pokemon.name}`);
+  };
+
   return (
     <div className="region-page">
       <h1>Johto Pokemons</h1>
@@ -47,7 +63,12 @@ export default function Johto() {
             <h4>Pokemon não encontrado</h4>
           ) : (
             result.map((poke, id) => (
-              <button type="button" className="Card" key={ id }>
+              <button
+                type="button"
+                className="Card"
+                key={ id }
+                onClick={ () => handleClick(poke) }
+              >
                 <Cell
                   name={ poke.name }
                   image={ poke.sprites.other.dream_world.front_default }
