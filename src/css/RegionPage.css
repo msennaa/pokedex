@@ -1,0 +1,27 @@
+.region-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.region-page nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.region-page nav button {
+  background-color: white;
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  margin-bottom: 40px;
+}
+
+.region-page input {
+  width: 60%;
+  height: 40px;
+  border-radius: 15px;
+  display: flex;
+  margin-bottom: 40px;
+}

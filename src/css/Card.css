@@ -1,0 +1,162 @@
+.Card img {
+  width: 200px;
+  height: 200px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: #f1f1f1;
+  flex-basis: 19%;
+  margin-bottom: 15px;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.teste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.Card:hover {
+  box-shadow: 0 0 1em red;
+}
+
+.Card h3 {
+  color: black;
+}
+
+.Card article {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Card article p {
+  border-radius: 15px;
+  padding: 6px;
+  margin-left: 6px;
+}
+
+.grass {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.fire {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.water {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.electric {
+  background-color: rgb(231, 231, 1);
+  color: white;
+  font-weight: bold;
+}
+
+.poison {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+}
+
+.ground {
+  background-color: rgb(88, 88, 0);
+  color: white;
+  font-weight: bold;
+}
+
+.fairy {
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+}
+
+.rock {
+  background-color: rgb(85, 0, 0);
+  color: white;
+  font-weight: bold;
+}
+
+.fighting {
+  background-color: rgb(161, 1, 1);
+  color: white;
+  font-weight: bold;
+}
+
+.psychic {
+  background-color: rgb(250, 125, 146);
+  color: white;
+  font-weight: bold;
+}
+
+.bug {
+  background-color: lightgreen;
+  color: white;
+  font-weight: bold;
+}
+
+.flying {
+  background-color: #d8d7d7;
+  color: white;
+  font-weight: bold;
+}
+
+.normal {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+
+.ice {
+  background-color: lightblue;
+  color: white;
+  font-weight: bold;
+}
+
+.ghost {
+  background-color: rgb(153, 153, 255);
+  color: white;
+  font-weight: bold;
+}
+
+.dragon {
+  background-color: rgb(102, 92, 233);
+  color: white;
+  font-weight: bold;
+}
+
+.dark {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-weight: bold;
+}
+
+.steel {
+  background-color: rgb(68, 68, 68);
+  color: white;
+  font-weight: bold;
+}
