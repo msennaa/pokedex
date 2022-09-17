@@ -80,5 +80,4 @@ A ideia do projeto é criar uma pokedex.Esta aplicação possui as seguintes fun
 
   Qualquer tipo de feedback é bem vindo para que eu possa continuar melhorando. 
    - **senamatheusjob@gmail.com**
-
 </details>
