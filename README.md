@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório Pokedex !
+# Boas-vindas ao repositório Pokedex!
 
 A ideia do projeto é criar uma pokedex.Esta aplicação possui as seguintes funcionalidades:
 
