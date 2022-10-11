@@ -62,10 +62,10 @@ A ideia do projeto é criar uma pokedex.Esta aplicação possui as seguintes fun
   
   </details>
   
- <details>
-    <summary>
-      <strong>🫣 Deploy</strong>
-    </summary>
+<details>
+  <summary>
+    <strong>🫣 Deploy</strong>
+  </summary>
   
   - Quer testar sem clonar o projeto? [Clique aqui!](http://senapoke.herokuapp.com/)
 </details>
