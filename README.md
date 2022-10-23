@@ -38,7 +38,6 @@ A ideia do projeto é criar uma pokedex.Esta aplicação possui as seguintes fun
 
   - `start`: Roda a aplicação;
     - *uso (na raiz do projeto): `npm start`*
-
 </details>
 
 <details>
