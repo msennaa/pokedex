@@ -3,12 +3,11 @@ export const fetchFirstGenerationPokemons = async () => {
   const maxPokemons = 151;
   for (let i = 1; i <= maxPokemons; i += 1) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    // eslint-disable-next-line no-await-in-loop
-    const response = await fetch(url).then((result) => result.json());
+    const response = fetch(url).then((result) => result.json());
     array.push(response);
   }
 
-  return array;
+  return Promise.all(array);
 };
 
 export const fetchSecondGenerationPokemons = async () => {
@@ -17,12 +16,11 @@ export const fetchSecondGenerationPokemons = async () => {
   const initialPokemon = 152;
   for (let i = initialPokemon; i <= maxPokemons; i += 1) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    // eslint-disable-next-line no-await-in-loop
-    const response = await fetch(url).then((result) => result.json());
+    const response = fetch(url).then((result) => result.json());
     array.push(response);
   }
 
-  return array;
+  return Promise.all(array);
 };
 
 export const fetchThirdGenerationPokemons = async () => {
@@ -37,7 +35,7 @@ export const fetchThirdGenerationPokemons = async () => {
     array.push(response);
   }
 
-  return array;
+  return Promise.all(array);
 };
 
 export const fetchFourthGenerationPokemons = async () => {
@@ -52,7 +50,7 @@ export const fetchFourthGenerationPokemons = async () => {
     array.push(response);
   }
 
-  return array;
+  return Promise.all(array);
 };
 
 export const fetchFifthGenerationPokemons = async () => {
@@ -67,5 +65,5 @@ export const fetchFifthGenerationPokemons = async () => {
     array.push(response);
   }
 
-  return array;
+  return Promise.all(array);
 };
